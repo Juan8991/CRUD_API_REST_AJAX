@@ -18,7 +18,7 @@ export class ViewHtml {
       if (e.target.matches(".delete")) this.eliminar(e);
     });
     this.#doc.addEventListener("submit", (e) => {
-      this.controlCreaOeditarView(e);
+      controller.controlCreaOeditar(e);
     });
   }
   init(data) {
@@ -75,6 +75,7 @@ export class ViewHtml {
     this.#form.append(inputNombre,br1,inputConstelacion,br2,inputSubmit,inputHiden);
     articulo1.append(hDos, this.#form);
     const articulo2 = doc.createElement("article");
+    articulo2.classList.add("art2")
     const hDos2 = doc.createElement("h2");
     hDos2.textContent = "Ver Santos";
     this.#table = doc.createElement("table");
@@ -97,7 +98,7 @@ export class ViewHtml {
     return section;
   }
   createTemplate() {
-    const template = document.createElement("div");
+    const template = document.createElement("section");
     template.id = "crud-template";
     const tr = document.createElement("tr");
     const td1 = document.createElement("td");
@@ -116,10 +117,7 @@ export class ViewHtml {
     template.append(tr);
     return template;
   }
-  controlCreaOeditarView(e) {
-    controller.controlCreaOeditar(e);
-  }
-
+  
   editar(e) {
     console.log("Entro editar");
     this.#form.nombre.value = e.target.dataset.name;

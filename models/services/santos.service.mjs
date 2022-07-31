@@ -25,7 +25,6 @@ export class SantosService {
   }
 
   async saveSanto(e) {
-    console.log("Entro al metodo save santo");
     try {
       let options = {
           method: "POST",
@@ -41,10 +40,9 @@ export class SantosService {
         json = await res.json();
 
       if (!res.ok) throw { status: res.status, statusText: res.statusText };
-
       location.reload();
     } catch (err) {
-      let message = "Ocurrió un error";
+      console.log("entro al catch")
     }
   }
   async editSanto(e) {

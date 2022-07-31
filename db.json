@@ -39,26 +39,6 @@
       "nombre": "Saga",
       "constelacion": "Geminis",
       "id": 8
-    },
-    {
-      "nombre": "Máscara de Muerte",
-      "constelacion": "Cancer",
-      "id": 9
-    },
-    {
-      "nombre": "Aioria",
-      "constelacion": "Leo",
-      "id": 10
-    },
-    {
-      "nombre": "Maria",
-      "constelacion": "Hawai",
-      "id": 11
-    },
-    {
-      "nombre": "Jhonatan",
-      "constelacion": "Osa mayor",
-      "id": 12
     }
   ],
   "dioses": [
